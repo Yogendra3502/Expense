@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html,body{
+    width: 100%;
+    height: 100%;
+  }
+  
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #013d78c0;
+  }
+  
+  form{
+    padding: 2vw 1vw;
+    background-color: rgba(203, 197, 197, 0.944);
+    border-radius: 1vw;
+  }
+  h1{
+    font-size: 2.2vw;
+    text-align: center;
+    margin: 1.1vw 0;
+    margin-bottom: 2vw;
+   }
+
+  
+   input{
+    border-radius: .6vw;
+    padding: .3vw .8vw;
+    font-size: 1.2vw;
+    margin: 0 4vw;
+    width: 70%;
+    height: 5vh;
+   }
+  
+   button{
+    font-size: 1.1vw;
+    padding: .5vw 1vw;
+    margin-left: 6.5vw;
+    background-color: rgb(29, 33, 29);
+    color: aliceblue;
+    border: none;
+    border-radius: 2vw;
+   }
+  

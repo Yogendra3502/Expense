@@ -1,0 +1,12 @@
+<%- include("header.ejs")%>
+<link rel="stylesheet" href="stylesheets/reset.css">
+
+  <h1>reset new password</h1>
+  <form action="/reset" method="post">
+    <input type="password" name="oldpassword" placeholder="Enter your old password"> <br> <br>
+    <input type="password" name="newpassword" placeholder="Enter your new password"> <br> <br>
+    <button>Reset your password</button> <br> <br>
+  </form>
+
+
+  <%- include("footer.ejs")%>

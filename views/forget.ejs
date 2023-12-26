@@ -1,0 +1,13 @@
+<%- include("header.ejs")%>
+<%- include("nav.ejs")%>
+<link rel="stylesheet" href="stylesheets/reset.css">
+
+<form action="/sendmail" method="post">
+    <h1>Enter your email to send OTP</h1>
+    <input type="email" name="email" placeholder="Enter your new email"> <br> <br>
+    <button>send mail</button> <br> <br>
+  </form>
+
+
+
+  <%- include("footer.ejs")%>

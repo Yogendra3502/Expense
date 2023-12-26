@@ -1,0 +1,57 @@
+<%- include("header.ejs")%>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="stylesheets/profile.css">
+
+
+<div class="nav">
+  <a href="/profile"><i class="ri-arrow-left-line"></i>  Back</a>
+  <a href="/createexpense"><i class="ri-add-line"></i>Add New Expense</a>
+  
+  <h1 class="h1">Expense Tracker</h1>
+
+
+  <a href="/reset">reset password</a>
+  <a id="logout" href="/logout">log out</a>
+
+</div>
+  
+
+  <div class="box">
+    
+    <form action="/filter">
+      <select name="key">
+        <option value="amount">amount</option>
+        <option value="remarks">remarks</option>
+        <option value="paymentmode">paymentmode</option>
+        <option value="category">category</option>
+      </select>
+      <input type="text" name="value" placeholder="enter your search term">
+      <button>search</button>
+    </form>
+    <h1>Username: <span><%= Yogendra.username %> </span> </h1>
+  </div>
+  <br>
+  
+  <hr>
+  <% expense.forEach(function(e, i){ %>
+    <div class="container">
+
+  <h4> amount: <%= e.amount %></h4>   
+  <h4>remarks: <%= e.remarks %></h4>  
+  <h4> category: <%= e.category %></h4>   
+  <h4> paymentmode: <%= e.paymentmode %></h4>   
+  <h4> date: <%= e.date %></h4>   
+
+  <a href="/delete/<%= e._id %>">Delete</a>
+  <a id="edit" href="/update/<%= e._id %>">Edit</a>
+
+  
+</div>
+ <% }) %>
+
+
+
+ <h2>Total : <%= expense.reduce((ac, cv)=> ac+cv.amount, 0) %></h2>
+
+
+ <%- include("footer.ejs")%>

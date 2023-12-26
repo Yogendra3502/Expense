@@ -1,0 +1,27 @@
+<%- include("header.ejs")%>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="stylesheets/create.css">
+
+
+<div class="nav">
+  <a href="/profile"><i class="ri-arrow-left-line"></i></a>
+
+  <a href="/reset">reset password</a>
+  <a href="/logout">log out</a>
+
+</div>
+
+<div class="form">
+
+
+  <h1>Create your Expence</h1>
+  <form action="/createexpense" method="post">
+    <input type="number" name="amount" placeholder="Enter your amount"> <br> <br>
+    <input type="text" name="remarks" placeholder="Enter your remarks"> <br> <br>
+    <input type="text" name="category" placeholder="Enter your category"> <br> <br>
+    <input type="text" name="paymentmode" placeholder="Enter your paymentmode"> <br> <br>
+    <button>submit</button> <br> <br>
+  </form>
+</div>
+
+  <%- include("footer.ejs")%>

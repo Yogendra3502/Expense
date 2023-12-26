@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="stylesheets/nav.css">
+
+
+<nav>
+
+    <% if(!Yogendra){ %>
+        <a href="/">Home</a>
+        <a href="/login">login</a>
+        <a href="/forget">forget password</a>
+        
+        <% }else{  %>
+            <a href="/profile">Home</a>
+            <a href="/reset">reset password</a>
+            <a href="/logout">log out</a>
+            
+            <% }%>
+ </nav>

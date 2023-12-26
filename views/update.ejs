@@ -1,0 +1,73 @@
+<%- include("header.ejs")%>
+<style>
+  *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(67, 127, 146, 0.8);
+
+}
+
+form{
+  width: 30vw;
+  /* height: 60vh; */
+  padding: 2vw;
+  background-color: rgba(78, 77, 77, 0.532);
+  border-radius: 1vw;
+  backdrop-filter: 10px;
+}
+
+ input{
+  border-radius: .6vw;
+  padding: .3vw .8vw;
+  font-size: 1.2vw;
+  /* border: none; */
+  margin: 0 4vw;
+  width: 70%;
+  height: 5vh;
+ }
+
+ button{
+  font-size: 1.1vw;
+  padding: .6vw 1.4vw;
+  margin-left: 10vw;
+  background-color: rgb(11, 14, 11);
+  color: aliceblue;
+  border: none;
+  border-radius: 2vw;
+ }
+
+ h1{
+  margin-bottom: 2vw;
+  background-color: rgb(76, 255, 76);
+  color: rgb(35, 37, 39);
+  border-radius: .7vw;
+  padding: .4vw 1.2vw;
+ }
+</style>
+
+
+<h1>Update your Expence</h1>
+
+  <form action="/update/<%= data._id %>" method="post">
+    <input value="<%= data.amount %>" type="number" name="amount" placeholder="Enter your amount"> <br> <br>
+    <input value="<%= data.remarks %>" type="text" name="remarks" placeholder="Enter your remarks"> <br> <br>
+    <input value="<%= data.category %>" type="text" name="category" placeholder="Enter your category"> <br> <br>
+    <input value="<%= data.paymentmode %>" type="text" name="paymentmode" placeholder="Enter your paymentmode"> <br> <br>
+    <button>update</button> <br> <br>
+  </form>
+
+
+  <%- include("footer.ejs")%>
